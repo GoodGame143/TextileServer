@@ -15,5 +15,4 @@ router.get('/changeLinkLocal', postController.changeLinkLocal)
 router.get('/changeLinkGlobalt4', postController.changeLinkGlobalt4)
 router.get('/changeLinkLocalt4', postController.changeLinkLocalt4)
 
-router.get('/d', postController.test)
 module.exports = router

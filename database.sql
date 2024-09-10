@@ -39,6 +39,25 @@ create TABLE sscc_v2(
         defect_code INTEGER,
         flag_print CHAR  
 );
+create TABLE sscc_v3(
+        id VARCHAR(50),
+        id_change CHAR,
+        id_controler INTEGER,
+        id_machine INTEGER,
+        deviation_percent NUMERIC(4,3),
+        ddate VARCHAR(10),
+        ttime VARCHAR(10),
+        sort CHAR,
+        parent_sscc INTEGER,
+        child_sscc INTEGER UNIQUE,
+        quantity_meters_real NUMERIC(7,1),
+        quantity_meters_final NUMERIC(7,1),
+        cuts INTEGER null,
+        cutouts_quantity INTEGER null,
+        cutouts_meters NUMERIC(2,1) null,
+        defect_code INTEGER,
+        flag_print CHAR  
+);
 
 create TABLE sscc_roll(
         roll INTEGER UNIQUE
