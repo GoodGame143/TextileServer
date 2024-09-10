@@ -248,7 +248,7 @@ function getTime(){
   return ttime
 }
 async function recordSSCC(version, values){
-  try {
+  
     if(version == 1){
       const sqlQuery = "INSERT INTO sscc(id, id_change, id_controler, id_machine, deviation_percent, ddate, ttime, sort, parent_sscc, child_sscc, quantity_meters_real, quantity_meters_final, cuts, cutouts_quantity, cutouts_meters, defect_code, flag_print) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17) RETURNING *";
       const result = await db.query(sqlQuery, values);      
@@ -264,9 +264,7 @@ async function recordSSCC(version, values){
       const result = await db.query(sqlQuery, values);      
       
     }
-  } catch (error) {
-    console.log(error)
-  }
+ 
  
 }
 async function recordTrim(version, values){
